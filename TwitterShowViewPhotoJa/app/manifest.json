@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Twitter Show View Photo 日本語",
+    "description": "「写真を表示」を表示",
+    "version": "0.1",
+    "icons": { "128": "img/icon.png" },
+    "page_action": {
+        "default_icon": {
+            "19": "img/icon.png"
+        },
+        "default_title": "enabled"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/"
+            ],
+            "js": [
+                "jquery-2.1.4.min.js",
+                "contentscript.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [ "background.js" ],
+        "persistent": false
+    },
+    "permissions": [ ]
+}
